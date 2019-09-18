@@ -1,0 +1,42 @@
+<resources>
+    <string name="app_name">Assignment_7</string>
+
+    <!--activity_main-->
+    <string name="lbl1">Movies</string>
+    <string name="fragment_one">Now Showing</string>
+    <string name="fragment_two">Cinema</string>
+    <string name="fragment_three">Coming Soon</string>
+
+    <!--now_showing_item_view-->
+    <string name="show_lbl1">Black Panther</string>
+    <string name="show_lbl2">Fantasy/Science fiction</string>
+    <string name="show_lbl3">2h 15m</string>
+    <string name="show_lbl4">7.5</string>
+    <string name="show_lbl5">97%</string>
+    <string name="show_lbl6">92%</string>
+    <string name="show_lbl7">IMDB</string>
+    <string name="show_lbl8">Rotten Tomato</string>
+    <string name="show_lbl9">Metacritic</string>
+    <string name="show_lbl10">Buy Tickets</string>
+
+    <!--activity_detail-->
+    <string name="detail_lbl1">Black Panther</string>
+    <string name="detail_lbl2">Fantasy/Science fiction</string>
+    <string name="detail_lbl3">2h 15m</string>
+    <string name="detail_lbl4">7.5</string>
+    <string name="detail_lbl5">97%</string>
+    <string name="detail_lbl6">92%</string>
+    <string name="detail_lbl7">IMDB</string>
+    <string name="detail_lbl8">Rotten Tomato</string>
+    <string name="detail_lbl9">Metacritic</string>
+    <string name="detail_lbl10">After the death of his father, T Challa returns home to the African nation of Wakanda to take his rightful place as king. When a powerful enemy suddenly reappears, T Challa is mettle as king -- and as Black Panther -- gets tested when he is drawn into a conflict that puts the fate of Wakanda and the entire world at risk. Faced with treachery and danger, the young king must rally his allies and release the full power of Black Panther to defeat his foes and secure the safety of his people.</string>
+    <string name="detail_lbl11">Read more</string>
+    <string name="detail_lbl12">Buy Tickets</string>
+    <string name="detail_lbl13">Cast</string>
+    <string name="detail_lbl14">Screenshots</string>
+
+    <!--cast_item_view-->
+    <string name="cast_lbl1">Natalie Portman</string>
+
+
+</resources>
