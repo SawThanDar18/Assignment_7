@@ -12,10 +12,11 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.example.assignment_7.R
 import com.example.assignment_7.adapters.NowShowingAdapter
+import com.example.assignment_7.delegates.ItemClicked
 import kotlinx.android.synthetic.main.fragment_now_showing.*
 
-class NowShowingFragment : Fragment() {
-    
+class NowShowingFragment : Fragment(), ItemClicked {
+
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_now_showing, container, false)
     }
@@ -23,12 +24,16 @@ class NowShowingFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val nowShowingAdapter = NowShowingAdapter()
+        val nowShowingAdapter = NowShowingAdapter(this)
 
         val layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         now_showing_rv.layoutManager = layoutManager
 
         now_showing_rv.adapter = nowShowingAdapter
+    }
+
+    override fun onClicked(id: Int) {
+
     }
 
 }
