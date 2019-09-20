@@ -4,12 +4,7 @@ import com.example.assignment_7.data.vos.MovieVO
 
 interface MovieModel {
 
-    fun getAllMovies(delegate: GetDataFromNetworkDelegate)
+    fun getAllMovies(onSuccess: (List<MovieVO>) -> Unit, onFailure: (String) -> Unit)
 
     fun findMovieById(movieId: Int): MovieVO
-
-    interface GetDataFromNetworkDelegate {
-        fun onSuccess(movieVO: List<MovieVO>)
-        fun onFailure(errorMessage: String)
-    }
 }
