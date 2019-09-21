@@ -38,6 +38,8 @@
     <!--cast_item_view-->
     <string name="cast_lbl1">Natalie Portman</string>
 
+    <string name="snackbar_msg">Error</string>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

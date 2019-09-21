@@ -14,4 +14,5 @@ abstract class BaseActivity: AppCompatActivity() {
 
         movieModel = MovieModelImpl
     }
+
 }

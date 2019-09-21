@@ -9,3 +9,6 @@ const val EM_NULL_RESPONSE = "Check Internet Connection"
 
 //Response Code
 const val CODE_RESPONSE_OK = 200
+
+//DB_NAME
+const val DB_NAME = "movie"
