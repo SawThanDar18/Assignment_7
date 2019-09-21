@@ -12,10 +12,14 @@ import androidx.recyclerview.widget.RecyclerView
 
 import com.example.assignment_7.R
 import com.example.assignment_7.adapters.NowShowingAdapter
+import com.example.assignment_7.data.models.MovieModel
+import com.example.assignment_7.data.models.MovieModelImpl
+import com.example.assignment_7.data.vos.MovieVO
 import com.example.assignment_7.delegates.ItemClicked
+import com.example.assignment_7.network.dataagents.RetrofitDataAgentImpl
 import kotlinx.android.synthetic.main.fragment_now_showing.*
 
-class NowShowingFragment : Fragment(), ItemClicked {
+class NowShowingFragment : BaseFragment(), ItemClicked {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         return inflater.inflate(R.layout.fragment_now_showing, container, false)
@@ -29,7 +33,15 @@ class NowShowingFragment : Fragment(), ItemClicked {
         val layoutManager = LinearLayoutManager(context, RecyclerView.HORIZONTAL, false)
         now_showing_rv.layoutManager = layoutManager
 
-        now_showing_rv.adapter = nowShowingAdapter
+        movieModel.getAllMovies(
+            onSuccess = {moviesVO ->
+                nowShowingAdapter.setNewData(moviesVO as MutableList<MovieVO>)
+                now_showing_rv.adapter = nowShowingAdapter
+            },
+            onFailure = {
+            }
+        )
+
     }
 
     override fun onClicked(id: Int) {

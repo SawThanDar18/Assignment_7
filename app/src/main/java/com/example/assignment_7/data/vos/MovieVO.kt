@@ -5,27 +5,27 @@ import com.google.gson.annotations.SerializedName
 data class MovieVO (
 
     @SerializedName("id")
-    private val id: Int,
+    val id: Int,
 
     @SerializedName("movie_name")
-    private val movie_name: String,
+    val movie_name: String,
 
     @SerializedName("imdb")
-    private val imdb: Double,
+    val imdb: Double,
 
     @SerializedName("rotten_tomato")
-    private val rotten_tomato: Int,
+    val rotten_tomato: Int,
 
     @SerializedName("meta_centric")
-    private val meta_centric: Int,
+    val meta_centric: Int,
 
     @SerializedName("genre")
-    private val genre: List<GenreVO>,
+    val genre: List<GenreVO>,
 
     @SerializedName("overview")
-    private val overview: String,
+    val overview: String,
 
     @SerializedName("poster")
-    private val poster: String
+    val poster: String
 
 )

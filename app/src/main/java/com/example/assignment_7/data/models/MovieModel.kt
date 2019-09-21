@@ -6,5 +6,5 @@ interface MovieModel {
 
     fun getAllMovies(onSuccess: (List<MovieVO>) -> Unit, onFailure: (String) -> Unit)
 
-    fun findMovieById(movieId: Int): MovieVO
+    //fun findMovieById(movieId: Int): MovieVO
 }

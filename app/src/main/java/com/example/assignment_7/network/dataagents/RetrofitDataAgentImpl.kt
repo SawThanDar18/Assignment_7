@@ -13,20 +13,9 @@ import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
 import java.util.concurrent.TimeUnit
 
-class RetrofitDataAgentImpl: DataAgent {
+object RetrofitDataAgentImpl: DataAgent {
 
     private val movieApi: MovieApi
-
-    companion object{
-        private var objInstance: RetrofitDataAgentImpl? = null
-
-        fun getInstance(): RetrofitDataAgentImpl {
-            if (objInstance == null) objInstance = RetrofitDataAgentImpl()
-
-            val i = objInstance
-            return i!!
-        }
-    }
 
     init {
         var okHttpClient = OkHttpClient.Builder()
