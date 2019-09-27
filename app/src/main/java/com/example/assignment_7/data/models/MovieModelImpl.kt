@@ -20,4 +20,9 @@ object MovieModelImpl: BaseModel(), MovieModel {
                 })
         }
     }
+
+    override fun findMovieById(id: Int): MovieVO {
+        val movieVO = database.movieDao().getMoviesById(id)
+        return movieVO
+    }
 }

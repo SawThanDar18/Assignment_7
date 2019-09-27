@@ -9,7 +9,7 @@ abstract class BaseViewHolder<T>(itemView: View): RecyclerView.ViewHolder(itemVi
         set(value) {
             field = value
 
-            if(value != null){
+            value?.let {
                 bindData(value)
             }
         }

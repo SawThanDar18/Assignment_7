@@ -11,33 +11,33 @@ data class MovieVO (
     @PrimaryKey
     @SerializedName("id")
     @ColumnInfo(name = "id")
-    val id: Int,
+    var id: Int,
 
     @SerializedName("movie_name")
     @ColumnInfo(name = "movie_name")
-    val movie_name: String,
+    var movie_name: String,
 
     @SerializedName("imdb")
     @ColumnInfo(name = "imdb")
-    val imdb: Double,
+    var imdb: Double,
 
     @SerializedName("rotten_tomato")
     @ColumnInfo(name = "rotten_tomato")
-    val rotten_tomato: Int,
+    var rotten_tomato: Int,
 
     @SerializedName("meta_centric")
     @ColumnInfo(name = "meta_centric")
-    val meta_centric: Int,
+    var meta_centric: Int,
 
     @SerializedName("genre")
-    val genre: List<GenreVO>,
+    var genre: List<GenreVO>,
 
     @SerializedName("overview")
     @ColumnInfo(name = "overview")
-    val overview: String,
+    var overview: String,
 
     @SerializedName("poster")
     @ColumnInfo(name = "poster")
-    val poster: String
+    var poster: String
 
 )

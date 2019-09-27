@@ -1,7 +1,7 @@
 package com.example.assignment_7.viewsHolders
 
 import android.view.View
-import androidx.recyclerview.widget.RecyclerView
+import android.widget.ImageView
 import com.bumptech.glide.Glide
 import com.example.assignment_7.data.vos.MovieVO
 import com.example.assignment_7.delegates.ItemClicked
@@ -11,8 +11,11 @@ class NowShowingItemViewHolder(itemView: View, private val itemClicked: ItemClic
 
     init {
         itemView.setOnClickListener {
-            val id = data?.id
+            /*val id = data?.id
             if (id != null){
+                itemClicked.onClicked(id)
+            }*/
+            data?.id?.let {id ->
                 itemClicked.onClicked(id)
             }
 
@@ -21,9 +24,9 @@ class NowShowingItemViewHolder(itemView: View, private val itemClicked: ItemClic
     override fun bindData(data: MovieVO) {
 
         itemView.movie_name.text = data.movie_name
-        itemView.movie_imdb.text = data.imdb.toString()
-        itemView.movie_rotten.text = data.rotten_tomato.toString()
-        itemView.movie_metacritic.text = data.meta_centric.toString()
+        itemView.movie_imdb.text = data.imdb.toString() + "%"
+        itemView.movie_rotten.text = data.rotten_tomato.toString() + "%"
+        itemView.movie_metacritic.text = data.meta_centric.toString() + "%"
         Glide.with(itemView).load(data.poster).into(itemView.imageView3)
     }
 }

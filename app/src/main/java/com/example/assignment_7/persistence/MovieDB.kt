@@ -7,7 +7,7 @@ import com.example.assignment_7.persistence.daos.MovieDao
 import com.example.assignment_7.persistence.typeconverters.GenreTypeConverter
 import com.example.assignment_7.utils.DB_NAME
 
-@Database(entities = arrayOf(MovieVO::class), version = 2, exportSchema = false)
+@Database(entities = arrayOf(MovieVO::class), version = 3, exportSchema = false)
 @TypeConverters(GenreTypeConverter::class)
 abstract class MovieDB: RoomDatabase() {
 
