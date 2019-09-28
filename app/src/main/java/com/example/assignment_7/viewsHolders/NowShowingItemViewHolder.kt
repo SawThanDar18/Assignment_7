@@ -10,7 +10,7 @@ import kotlinx.android.synthetic.main.now_showing_item_view.view.*
 class NowShowingItemViewHolder(itemView: View, private val itemClicked: ItemClicked) : BaseViewHolder<MovieVO>(itemView) {
 
     init {
-        itemView.setOnClickListener {
+        itemView.imageView3.setOnClickListener {
             /*val id = data?.id
             if (id != null){
                 itemClicked.onClicked(id)
